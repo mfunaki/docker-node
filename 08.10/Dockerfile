@@ -6,3 +6,5 @@ RUN sudo apt-get update && sudo apt-get install -y \
         git nodejs npm && \
     sudo rm -rf /var/lib/apt/lists/*
 ## 最後の行でイメージ内のAptキャッシュを削除し、イメージのサイズを抑える
+
+CMD [ "/bin/bash" ]
