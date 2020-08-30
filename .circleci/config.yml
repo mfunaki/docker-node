@@ -15,7 +15,7 @@ jobs:
       - deploy:
           name: "Publish Docker Image(s) (master branch only)"
           command: |
-            if [ "${CIRCLE_BRANCH} == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
               echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
             
               # an else block will be added in the future for a staging release
